@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEMTEC - Entrevista Remota</title>
+    <!-- Favicon -->
+    <link rel="icon" href="3.png" type="image/x-icon">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="1.png" alt="Empresa XYZ Logo" class="logo">
+    <h1>FEMTEC</h1>
+</header>
+
+<div class="container">
+    <h1>Entrevista Remota</h1>
+    <form id="interviewForm">
+        <!-- Estudo de Caso 1 -->
+        <div id="case1" class="case-study">
+            <p><strong>Estudo de Caso 1:</strong> Você está gerenciando um projeto importante com um prazo apertado. No meio do projeto, você descobre que um dos membros da equipe está atrasando as entregas e afetando o progresso geral.</p>
+            <label><input type="radio" name="case1" value="4" onclick="nextCase(1)"> Falar diretamente com o membro da equipe para entender as dificuldades e oferecer suporte.</label>
+            <label><input type="radio" name="case1" value="1" onclick="nextCase(1)"> Discutir o problema com a equipe sem confrontar o membro específico.</label>
+            <label><input type="radio" name="case1" value="0" onclick="nextCase(1)"> Ignorar o problema e esperar que o membro da equipe se ajuste por conta própria.</label>
+            <label><input type="radio" name="case1" value="5" onclick="nextCase(1)"> Reunir a equipe, identificar os problemas e realocar tarefas para garantir que o prazo seja cumprido, mantendo a motivação.</label>
+            <label><input type="radio" name="case1" value="2" onclick="nextCase(1)"> Reportar imediatamente o problema ao superior sem falar com o membro da equipe.</label>
+        </div>
+
+        <div id="case2" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 2:</strong> Um cliente importante reclama de um serviço que não atendeu às suas expectativas. O cliente está irritado e ameaça levar seu negócio para outro lugar.</p>
+            <label><input type="radio" name="case2" value="4" onclick="nextCase(2)"> Pedir desculpas ao cliente, investigar o problema e propor uma solução rápida e eficiente.</label>
+            <label><input type="radio" name="case2" value="5" onclick="nextCase(2)"> Pedir desculpas, investigar a fundo a questão, resolver o problema e oferecer um benefício adicional ao cliente para manter o relacionamento.</label>
+            <label><input type="radio" name="case2" value="2" onclick="nextCase(2)"> Oferecer um desconto para apaziguar o cliente, sem investigar o problema.</label>
+            <label><input type="radio" name="case2" value="0" onclick="nextCase(2)"> Ignorar a reclamação do cliente.</label>
+            <label><input type="radio" name="case2" value="1" onclick="nextCase(2)"> Informar ao cliente que a empresa está ciente do problema e que ele será resolvido em breve, sem dar muitos detalhes.</label>
+        </div>
+
+        <div id="case3" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 3:</strong> Um dos seus funcionários-chave solicitou uma licença de emergência por motivos pessoais. Isso deixará a equipe desfalcada em um período crítico.</p>
+            <label><input type="radio" name="case3" value="5" onclick="nextCase(3)"> Aceitar o pedido, redistribuir as tarefas após consultar a equipe e, se necessário, contratar temporariamente um substituto.</label>
+            <label><input type="radio" name="case3" value="4" onclick="nextCase(3)"> Aceitar o pedido, redistribuir as tarefas com a equipe, solicitando a colaboração de todos.</label>
+            <label><input type="radio" name="case3" value="2" onclick="nextCase(3)"> Aceitar o pedido e distribuir as tarefas do funcionário entre os membros restantes, sem consultar a equipe.</label>
+            <label><input type="radio" name="case3" value="1" onclick="nextCase(3)"> Aceitar o pedido, mas não tomar medidas para cobrir a ausência.</label>
+            <label><input type="radio" name="case3" value="0" onclick="nextCase(3)"> Negar o pedido de licença, insistindo na presença do funcionário.</label>
+        </div>
+
+        <div id="case4" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 4:</strong> Você precisa escolher entre dois fornecedores. Um oferece um preço menor, mas não é muito confiável; o outro é mais caro, mas é altamente recomendado e confiável.</p>
+            <label><input type="radio" name="case4" value="4" onclick="nextCase(4)"> Fazer uma análise de custo-benefício e tentar negociar preços com ambos os fornecedores.</label>
+            <label><input type="radio" name="case4" value="1" onclick="nextCase(4)"> Escolher o fornecedor mais caro com base apenas nas recomendações.</label>
+            <label><input type="radio" name="case4" value="0" onclick="nextCase(4)"> Escolher o fornecedor mais barato sem considerar a confiabilidade.</label>
+            <label><input type="radio" name="case4" value="2" onclick="nextCase(4)"> Pedir descontos ao fornecedor mais caro, sem negociar com o mais barato.</label>
+            <label><input type="radio" name="case4" value="5" onclick="nextCase(4)"> Negociar com ambos, considerar fatores como qualidade, prazos e histórico, e então tomar uma decisão informada.</label>
+        </div>
+
+        <div id="case5" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 5:</strong> Sua empresa está enfrentando um declínio nas vendas e você identificou que o processo de vendas precisa ser otimizado.</p>
+            <label><input type="radio" name="case5" value="5" onclick="nextCase(5)"> Reunir dados, consultar a equipe, realizar testes-piloto e, em seguida, implementar uma solução inovadora com acompanhamento contínuo.</label>
+            <label><input type="radio" name="case5" value="4" onclick="nextCase(5)"> Consultar a equipe para identificar falhas e implementar uma solução em fases, com testes.</label>
+            <label><input type="radio" name="case5" value="2" onclick="nextCase(5)"> Identificar um novo processo, mas não fazer um teste piloto antes de implementá-lo em larga escala.</label>
+            <label><input type="radio" name="case5" value="1" onclick="nextCase(5)"> Implementar uma pequena mudança no processo sem consultar a equipe.</label>
+            <label><input type="radio" name="case5" value="0" onclick="nextCase(5)"> Continuar com o processo atual, esperando que as vendas se recuperem por conta própria.</label>
+        </div>
+
+        <div id="case6" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 6:</strong> Um problema técnico grave ocorreu no sistema da empresa, afetando vários clientes importantes.</p>
+            <label><input type="radio" name="case6" value="4" onclick="nextCase(6)"> Comunicar imediatamente o problema aos clientes, fornecer uma solução temporária e trabalhar para resolver o problema permanentemente.</label>
+            <label><input type="radio" name="case6" value="5" onclick="nextCase(6)"> Comunicar proativamente o problema, fornecer soluções alternativas, manter os clientes atualizados regularmente e implementar medidas para evitar problemas futuros.</label>
+            <label><input type="radio" name="case6" value="2" onclick="nextCase(6)"> Trabalhar na solução, mas não informar os clientes sobre o progresso.</label>
+            <label><input type="radio" name="case6" value="1" onclick="nextCase(6)"> Informar aos clientes que o problema está sendo resolvido, sem fornecer detalhes ou prazos.</label>
+            <label><input type="radio" name="case6" value="0" onclick="nextCase(6)"> Ignorar o problema, esperando que ele se resolva por si só.</label>
+        </div>
+
+        <div id="case7" class="case-study" style="display: none;">
+            <p><strong>Estudo de Caso 7:</strong> Um colega foi promovido, mas você tem dúvidas sobre a forma como ele alcançou essa promoção.</p>
+            <label><input type="radio" name="case7" value="4" onclick="nextCase(7)"> Perguntar ao colega como ele conseguiu a promoção e oferecer apoio, se necessário.</label>
+            <label><input type="radio" name="case7" value="1" onclick="nextCase(7)"> Confrontar o colega sobre os métodos que ele usou.</label>
+            <label><input type="radio" name="case7" value="2" onclick="nextCase(7)"> Falar com o superior do colega sobre os métodos dele.</label>
+            <label><input type="radio" name="case7" value="5" onclick="nextCase(7)"> Confrontar o colega em particular e discutir preocupações éticas, promovendo a transparência e a confiança na equipe.</label>
+            <label><input type="radio" name="case7" value="0" onclick="nextCase(7)"> Ignorar o que aconteceu e continuar a trabalhar normalmente.</label>
+        </div>
+
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<footer>
+    <p>@FEMTEC 2024 - Todos os direitos reservados.</p>
+</footer>
+
+<!-- Script -->
+<script>
+    console.log("JavaScript está funcionando!");
+
+    let totalScore = 0; // Armazenar a pontuação total
+    const totalQuestions = 7; // Total de questões
+
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log("Página carregada");
+        document.getElementById("case1").style.display = 'block';
+    });
+
+    function nextCase(currentCase) {
+        const currentCaseDiv = document.getElementById(`case${currentCase}`);
+        const nextCaseDiv = document.getElementById(`case${currentCase + 1}`);
+        
+        // Captura a pontuação da resposta selecionada
+        const selectedValue = document.querySelector(`input[name="case${currentCase}"]:checked`);
+        if (selectedValue) {
+            totalScore += parseInt(selectedValue.value); // Adiciona a pontuação à pontuação total
+        }
+
+        if (nextCaseDiv) {
+            currentCaseDiv.style.display = 'none'; // Esconder o estudo de caso atual
+            nextCaseDiv.style.display = 'block'; // Mostrar o próximo estudo de caso
+        } else {
+            // Se não houver mais casos, exibe a notificação
+            showResult();
+        }
+    }
+
+    function showResult() {
+        const form = document.getElementById("interviewForm");
+        form.style.display = 'none'; // Esconder o formulário de entrevistas
+        const resultDiv = document.getElementById("result");
+        
+        const passingScore = Math.ceil(totalQuestions / 2 * 5); // 50% das questões corretas, cada questão vale 5 pontos
+        const classification = totalScore >= passingScore ? 'classificado' : 'desclassificado';
+
+        resultDiv.innerHTML = `<h2>Resultado da Entrevista</h2><p>Você foi ${classification}. Sua pontuação total é ${totalScore} de ${totalQuestions * 5} pontos.</p>`;
+    }
+</script>
+</body>
+</html>
